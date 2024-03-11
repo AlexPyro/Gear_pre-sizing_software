@@ -8,7 +8,7 @@ class Trans
     double _Ne;
     double _Ns;
     double _Nb;
-    int nombre_arbres;
+    int _nombre_arbres;
     Arbre* _arbres; 
 
     protected :

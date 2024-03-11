@@ -6,7 +6,13 @@ using namespace std;
 #include "../include/Arbre.hpp"
 #include "../include/Roue.hpp"
 
-Arbre::Arbre(Roue* menee, Roue* menante, double N, int sens){
+Arbre::Arbre(Roue* menee, Roue* menante, double N, int sens)
+{
+    if (N < 0 |  N > 10000)
+    {
+        cout << "Valeur de vitesse hors intervalle, doit être compris entre 0 et 10000";
+    }
+
     _menee = menee;
     _menante = menante;
     _N = N;
