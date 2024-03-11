@@ -9,8 +9,7 @@ class Trans
     double _Ns;
     double _Nb;
     int nombre_arbres;
-    Arbre* _suivant;
-    Arbre* _arbres;
+    Arbre* _arbres; 
 
     protected :
 
