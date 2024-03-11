@@ -1,11 +1,8 @@
-#include "include/Roue.hpp"
-#include "include/Arbre.hpp"
-#include "include/Trans.hpp"
-
 #include "include/prototypes.hpp"
 
 #include <iostream>
 using namespace std;
+
 
 int main()
 {

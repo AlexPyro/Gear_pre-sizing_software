@@ -7,8 +7,8 @@ class Trans
     bool _sens;
     double _Ne;
     double _Ns;
-    double _Nb;
-    int _nombre_arbres;
+    int _Nb;
+    
     Arbre* _arbres; 
 
     protected :
