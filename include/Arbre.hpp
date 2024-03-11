@@ -21,4 +21,3 @@ class Arbre{
     void setMenante(Roue*);
     void setMenee(Roue*);
 };
-
