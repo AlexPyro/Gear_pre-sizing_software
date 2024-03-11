@@ -48,3 +48,13 @@ Roue* Arbre::getMenante(){
 Roue* Arbre::getMenee(){
     return _menee;
 }
+
+/* /!\ peut être pas util */
+Arbre* Arbre::getSuivant(){
+    return _suivant;
+}
+/*   */
+
+void Arbre::setSuivant(Arbre* suivant){
+    _suivant = suivant;
+}
