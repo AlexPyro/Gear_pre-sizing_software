@@ -14,8 +14,8 @@ Arbre::Arbre(Roue* menee, Roue* menante, double N, int sens){
 }
 
 Arbre::~Arbre(){
-    //free(_menee);
-    //free(_menante);
+    delete(_menee);
+    delete(_menante);
     _N = 0.;
     _sens = 0;
 }
@@ -37,7 +37,7 @@ void Arbre::setSens(int sens){
         _sens = 1;
     }
     else{
-        _sens =0;
+        _sens = 0;
     }
 }
 
