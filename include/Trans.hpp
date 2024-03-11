@@ -22,5 +22,5 @@ class Trans
     int getNbArbres();
 
     void ajoutArbre(Arbre*);
-    void retraitArbre(int);
+    void retraitArbre();
 };

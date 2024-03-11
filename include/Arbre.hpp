@@ -6,8 +6,8 @@ class Arbre{
     Roue* _menante; //roue menate
     Roue* _menee; //roue menante
     double _N; //vitesse de rotation
-    int _sens; //sens de 
-    Arbre* suivant; //pointeur sur l'arbre suivant
+    int _sens; //sens de rotation
+    Arbre* _suivant; //pointeur sur l'arbre suivant
 
     public:
     ~Arbre();
@@ -20,4 +20,6 @@ class Arbre{
     Roue* getMenante();
     void setMenante(Roue*);
     void setMenee(Roue*);
+    Arbre* getSuivant();
+    void setSuivant(Arbre*);
 };
