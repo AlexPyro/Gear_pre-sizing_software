@@ -32,6 +32,7 @@ double find_closest_reduction_ratio(double r, Arbre& arbre_menant, Arbre& arbre_
     }
 
     Roue menante(M_menante, Z_menante), menee(M_menee, Z_menee);
+    
     arbre_menant.setMenante(&menante);
     arbre_mene.setMenee(&menee);
 

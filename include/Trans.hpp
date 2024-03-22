@@ -8,7 +8,7 @@ class Trans
     double _Ne;
     double _Ns;
     int _Nb;
-    
+
     Arbre* _arbres; 
 
     protected :
@@ -22,5 +22,5 @@ class Trans
     int getNbArbres();
 
     void ajoutArbre(Arbre*);
-    void retraitArbre();
+    void retraitArbre(int);
 };

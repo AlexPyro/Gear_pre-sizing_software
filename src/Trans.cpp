@@ -4,7 +4,7 @@
 
 Trans::Trans()
 {
-    
+    _arbres = nullptr;
 }
 
 Trans::~Trans()
@@ -41,7 +41,7 @@ void Trans::ajoutArbre(Arbre* next)
     _Nb++;
 }
     
-void Trans::retraitArbre()
+void Trans::retraitArbre(int n)
 {
     _Nb--;
     Arbre* p = _arbres;

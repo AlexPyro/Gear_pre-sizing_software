@@ -4,7 +4,6 @@ using namespace std;
 #include <iostream>
 
 #include "../include/Arbre.hpp"
-#include "../include/Roue.hpp"
 
 Arbre::Arbre(Roue* menee, Roue* menante, double N, int sens)
 {

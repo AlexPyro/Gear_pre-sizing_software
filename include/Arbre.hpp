@@ -11,7 +11,7 @@ class Arbre{
 
     public:
     ~Arbre();
-    Arbre(Roue*, Roue*, double, int);
+    Arbre(Roue* = nullptr, Roue* = nullptr, double = 0, int = 0);
     double getN();
     void setN(double);
     int getSens();
