@@ -40,7 +40,7 @@ int trans_puissance(Trans& trans, int nombre_arbres, double vitesse_entree, doub
     float target_ratio = pow(target_ratio, 1.0/nombre_arbres); 
     float current_ratio = 1.0;
 
-    Arbre arbre1 = *trans.getArbres();
+    Arbre arbre1;
 
     trans.ajoutArbre(&arbre1);
 
@@ -49,9 +49,9 @@ int trans_puissance(Trans& trans, int nombre_arbres, double vitesse_entree, doub
     {   
         Arbre arbre2;
 
-        current_ratio *= find_closest_reduction_ratio(target_ratio, arbre1, arbre2);
-
         trans.ajoutArbre(&arbre2);
+
+        current_ratio *= find_closest_reduction_ratio(target_ratio, arbre1, arbre2);
 
         target_ratio = pow(target_ratio, i + 2)/ current_ratio;
 

@@ -9,13 +9,13 @@ Trans::Trans()
 
 Trans::~Trans()
 {
-    Arbre* p = _arbres;
+    /*Arbre* p = _arbres;
     Arbre* p_ = nullptr;
     for (int i = 0; i < _Nb; i++){
         p_ = p->getSuivant();
-        delete(p);
+        //delete(p);
         p = p_;
-    }
+    }*/
 
 }
 

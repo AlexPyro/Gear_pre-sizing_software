@@ -3,7 +3,8 @@
 #include <iostream>
 using namespace std;
 
-void print_trans(Trans transmission){
+void print_trans(Trans transmission)
+{
     printf("here\n");
     Arbre *p = transmission.getArbres();
     printf("here\n");
@@ -38,8 +39,6 @@ int main()
 
     int err = trans_puissance(transmission, 4, 1000, 2500, 1);
 
-    Roue roue1(4.5, 3), roue2(3.5, 2);
-
     Roue roue1(4.5, 3), roue2(3.5, 6);
     Arbre arbre1;
     Arbre arbre2;
@@ -50,21 +49,18 @@ int main()
     arbre2.setMenee(&roue1);
     arbre1.setSuivant(&arbre2);
 
-    Arbre arbre1;
-    arbre1.setMenante(&roue1);
-    arbre1.setMenee(&roue2);
-
     arbre3 = arbre1;
 
     //cout << "Nombre d'arbres : " << transmission.getNbArbres();
 
-    for(int i = 0; i < 2; i++){
+    for(int i = 0; i < 2; i++)
+    {
         printf(" arbre n° %d \n", i);
         printf(" \t roue menante Z = %d , D = %f, M = %f \n", arbre3.getMenante()->getZ(), 
-            arbre3.getMenante()->getD(), arbre3.getMenante()->getM());
+        arbre3.getMenante()->getD(), arbre3.getMenante()->getM());
         printf(" \t roue menee Z = %d , D = %f, M = %f \n", arbre3.getMenee()->getZ(), 
-            arbre3.getMenee()->getD(), arbre3.getMenee()->getM());
-            arbre3 = *arbre1.getSuivant();
+        arbre3.getMenee()->getD(), arbre3.getMenee()->getM());
+        arbre3 = *arbre1.getSuivant();
     } 
 
     print_trans(transmission);
