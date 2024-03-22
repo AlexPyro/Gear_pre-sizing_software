@@ -21,17 +21,20 @@ void print_trans(Trans transmission){
 int main()
 {
 
-    Roue R1(1, 14.4);
-
-    //cout << "Z= " << R1.getZ() << " M= " << R1.getM() << " D=" << R1.getD();
-
-    cout << R1.getZ();
+   
     //int err = trans_puissance(transmission, 4, 1000, 2500, 1);
 
-    Roue roue1(4.5, 3);
+    Roue roue1(4.5, 3), roue2(3.5, 2);
 
-    printf(" M = %f \n", roue1.getM());
+    cout << "D1 = " << roue1.getD();
+    cout << "\nD2 = " << roue2.getD();
 
+    Arbre arbre1;
+    arbre1.setMenante(&roue1);
+    arbre1.setMenee(&roue2);
+
+    cout << "\nD1 = " << arbre1.getMenante()->getD();
+    cout << "\nD2 = " << arbre1.getMenee()->getD();
     //cout << "Nombre d'arbres : " << transmission.getNbArbres();
 
 
