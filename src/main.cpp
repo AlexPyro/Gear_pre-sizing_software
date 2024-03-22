@@ -4,6 +4,7 @@
 using namespace std;
 
 void print_trans(Trans transmission){
+    printf("here\n");
     Arbre *p = transmission.getArbres();
     printf("here\n");
     printf(" nb arbre %d \n", transmission.getNbArbres());
@@ -24,17 +25,12 @@ int main()
 
     //cout << "Z= " << R1.getZ() << " M= " << R1.getM() << " D=" << R1.getD();
 
-    
-    Trans transmission;
-    Arbre arbre1;
-    Roue roue1(13.2, 13), roue2(15.2, 10);
-    arbre1.setMenee(&roue1);
-    arbre1.setMenante(&roue2);
-    transmission.ajoutArbre(&arbre1);
-
     cout << R1.getZ();
     //int err = trans_puissance(transmission, 4, 1000, 2500, 1);
 
+    Roue roue1(4.5, 3);
+
+    printf(" M = %f \n", roue1.getM());
 
     //cout << "Nombre d'arbres : " << transmission.getNbArbres();
 
