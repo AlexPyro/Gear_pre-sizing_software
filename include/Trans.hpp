@@ -7,7 +7,7 @@ class Trans
     bool _sens;
     double _Ne;
     double _Ns;
-    int _Nb;
+    int _Nb; //nb arbre
 
     Arbre* _arbres; 
 
@@ -15,7 +15,7 @@ class Trans
 
     public :
     
-    Trans();
+    Trans(Arbre*);
     ~Trans();
 
     Arbre* getArbres();
