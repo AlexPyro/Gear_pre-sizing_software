@@ -1,6 +1,10 @@
 #include "../include/Roue.hpp"
 using namespace std;
 
+Roue::~Roue(){
+    
+}
+
 Roue::Roue(double M,int Z)
 {
     _Z = Z;

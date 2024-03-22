@@ -17,6 +17,7 @@ class Roue
     
     Roue(double,int);
     Roue(double, double);
+    ~Roue();
 
     int getZ();
     void setZ(int);

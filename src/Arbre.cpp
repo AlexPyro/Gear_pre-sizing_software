@@ -18,10 +18,6 @@ Arbre::Arbre(Roue* menee, Roue* menante, double N, int sens)
 }
 
 Arbre::~Arbre(){
-    delete(_menee);
-    delete(_menante);
-    _N = 0.;
-    _sens = 0;
 }
 
 double Arbre::getN(){
