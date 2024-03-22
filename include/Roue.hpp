@@ -8,9 +8,7 @@ class Roue
     int _Z;
     double _D;
     double _M;
-    std::vector<float> _modules_possibles;  
     
-
     protected :
 
     public :

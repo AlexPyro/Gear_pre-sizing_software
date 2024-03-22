@@ -15,7 +15,7 @@ class Trans
 
     public :
     
-    Trans(Arbre*);
+    Trans();
     ~Trans();
 
     Arbre* getArbres();

@@ -20,21 +20,26 @@ void print_trans(Trans transmission){
 int main()
 {
 
-    //Roue R1(1, 14.4);
+    Roue R1(1, 14.4);
 
     //cout << "Z= " << R1.getZ() << " M= " << R1.getM() << " D=" << R1.getD();
 
-    Arbre* arbre1;
+    
+    Trans transmission;
+    Arbre arbre1;
+    Roue roue1(13.2, 13), roue2(15.2, 10);
+    arbre1.setMenee(&roue1);
+    arbre1.setMenante(&roue2);
+    transmission.ajoutArbre(&arbre1);
 
-    Trans transmission(arbre1);
-
+    cout << R1.getZ();
     //int err = trans_puissance(transmission, 4, 1000, 2500, 1);
 
 
     //cout << "Nombre d'arbres : " << transmission.getNbArbres();
 
 
-    print_trans(transmission);
+    //print_trans(transmission);
 
 
 }

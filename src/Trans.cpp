@@ -2,10 +2,9 @@
 
 #include "../include/Trans.hpp"
 
-Trans::Trans(Arbre* arbre1)
+Trans::Trans()
 {
-    _arbres = arbre1;
-    _Nb = 1;
+    _arbres = nullptr;
 }
 
 Trans::~Trans()
