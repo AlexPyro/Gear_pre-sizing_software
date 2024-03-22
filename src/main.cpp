@@ -15,6 +15,4 @@ int main()
 
     cout << "Nombre d'arbres : " << trans_opti->getNbArbres();
 
-    
-
 }

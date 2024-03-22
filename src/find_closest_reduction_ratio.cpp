@@ -1,13 +1,15 @@
 #include "../include/prototypes.hpp"
+#include <vector>
 
-std::vector<float> modules_possibles = {0.13, 0.5, 0.6, 0.8, 1, 1.25, 1.5, 2, 2.5, 3, 4, 5, 6, 8};
+
 
 double find_closest_reduction_ratio(double r, Arbre& arbre_menant, Arbre& arbre_mene)
 {
+    std::vector<float> modules_possibles = {0.13, 0.5, 0.6, 0.8, 1, 1.25, 1.5, 2, 2.5, 3, 4, 5, 6, 8};
     float M_menee, M_menante, erreur;
     int Z_menee, Z_menante;
     double current_error;
-
+    
     for (int i = 0; i < modules_possibles.size() ; i++)
     {
         for (int j = 0; j < modules_possibles.size() ; j++)

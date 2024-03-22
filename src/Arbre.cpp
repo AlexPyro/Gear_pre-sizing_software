@@ -1,7 +1,6 @@
-using namespace std;
-
 #include <cstdlib>
 #include <iostream>
+using namespace std;
 
 #include "../include/Arbre.hpp"
 
