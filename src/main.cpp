@@ -40,10 +40,6 @@ int main()
 
     Roue roue1(4.5, 3), roue2(3.5, 2);
 
-<<<<<<< HEAD
-    cout << "D1 = " << roue1.getD();
-    cout << "\nD2 = " << roue2.getD();
-=======
     Roue roue1(4.5, 3), roue2(3.5, 6);
     Arbre arbre1;
     Arbre arbre2;
@@ -53,7 +49,6 @@ int main()
     arbre2.setMenante(&roue1);
     arbre2.setMenee(&roue1);
     arbre1.setSuivant(&arbre2);
->>>>>>> 4be37155d6b1ba8bf2893103f8a911a836592b2d
 
     Arbre arbre1;
     arbre1.setMenante(&roue1);
