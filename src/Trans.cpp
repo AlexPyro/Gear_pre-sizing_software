@@ -31,21 +31,25 @@ int Trans::getNbArbres()
     
 void Trans::ajoutArbre(Arbre* next)
 {   
-    if (_Nb == 0){
+    if (_Nb == 0)
+    {
         _arbres = next;
         _Nb++;
     }
-    else{
+
+    else
+    {
         Arbre* p = _arbres;
         Arbre* p_ = nullptr;
-        for (int i = 0; i < _Nb; i++){
+
+        for (int i = 0; i < _Nb; i++)
+        {
             p_ = p->getSuivant();
             p = p_;
         }
-    
 
-    p->setSuivant(next);
-    _Nb++;
+        p->setSuivant(next);
+        _Nb++;
     }
 }
     

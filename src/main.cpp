@@ -36,8 +36,8 @@ int main()
 
     //Arbre* arbre3 = transmission.getArbres();
 
-
-    //int err = trans_puissance(transmission, 4, 1000, 2500, 1);
+    cout << "aaaaa";
+    int err = trans_puissance(transmission, 4, 1000, 2500, -1);
 
     Roue roue1(4.5, 3), roue2(3.5, 6);
     Arbre arbre1;
@@ -63,8 +63,8 @@ int main()
         arbre3 = *arbre1.getSuivant();
     } 
 
-    transmission.ajoutArbre(&arbre1);
-    transmission.ajoutArbre(&arbre2);
+    //transmission.ajoutArbre(&arbre1);
+    //transmission.ajoutArbre(&arbre2);
 
     printf("nb arbre %d\n ", transmission.getNbArbres());
 
