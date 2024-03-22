@@ -14,7 +14,7 @@ Trans::~Trans()
     Arbre* p_ = nullptr;
     for (int i = 0; i < _Nb; i++){
         p_ = p->getSuivant();
-        delete(p);
+        //delete(p);
         p = p_;
     }
 
@@ -31,15 +31,23 @@ int Trans::getNbArbres()
 }
     
 void Trans::ajoutArbre(Arbre* next)
-{
-    Arbre* p = _arbres;
-    Arbre* p_ = nullptr;
-    for (int i = 0; i < _Nb; i++){
-        p_ = p->getSuivant();
-        p = p_;
+{   
+    if (_Nb == 0){
+        _arbres = next;
+        _Nb++;
     }
+    else{
+        Arbre* p = _arbres;
+        Arbre* p_ = nullptr;
+        for (int i = 0; i < _Nb; i++){
+            p_ = p->getSuivant();
+            p = p_;
+        }
+    
+
     p->setSuivant(next);
     _Nb++;
+    }
 }
     
 void Trans::retraitArbre(int n)
