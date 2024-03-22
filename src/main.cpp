@@ -12,7 +12,11 @@ int main()
     //cout << "Z= " << R1.getZ() << " M= " << R1.getM() << " D=" << R1.getD();
 
     Trans* trans_opti = trans_puissance(4, 1000, 2500, 1);
+    Trans transmission;
 
-    cout << "Nombre d'arbres : " << trans_opti->getNbArbres();
+    int err = trans_puissance(transmission, 4, 1000, 2500, 1);
+
+
+    cout << "Nombre d'arbres : " << transmission.getNbArbres();
 
 }

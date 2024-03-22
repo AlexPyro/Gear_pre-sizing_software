@@ -62,3 +62,11 @@ Arbre* Arbre::getSuivant(){
 void Arbre::setSuivant(Arbre* suivant){
     _suivant = suivant;
 }
+
+void Arbre::setMenante(Roue* roue){
+    _menante = roue;
+}
+
+void Arbre::setMenee(Roue* roue){
+    _menee = roue;
+}
