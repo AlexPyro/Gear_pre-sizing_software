@@ -54,13 +54,8 @@ int main()
     arbre1.setMenante(&roue1);
     arbre1.setMenee(&roue2);
 
-<<<<<<< HEAD
-    cout << "\nD1 = " << arbre1.getMenante()->getD();
-    cout << "\nD2 = " << arbre1.getMenee()->getD();
-=======
     arbre3 = arbre1;
 
->>>>>>> 4be37155d6b1ba8bf2893103f8a911a836592b2d
     //cout << "Nombre d'arbres : " << transmission.getNbArbres();
 
     for(int i = 0; i < 2; i++){
