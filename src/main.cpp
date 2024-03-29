@@ -36,6 +36,7 @@ int main()
 
     //Arbre* arbre3 = transmission.getArbres();
 
+<<<<<<< HEAD
     cout << "aaaaa";
     int err = trans_puissance(transmission, 4, 1000, 2500, -1);
 
@@ -62,11 +63,29 @@ int main()
         arbre3.getMenee()->getD(), arbre3.getMenee()->getM());
         arbre3 = *arbre1.getSuivant();
     } 
+=======
+
+    int err = trans_puissance(transmission, 4, 1000, 2500, 1);
+
+
+ 
+
+    //cout << "Nombre d'arbres : " << transmission.getNbArbres();
+
+    //for(int i = 0; i < 2; i++){
+    //    printf(" arbre n° %d \n", i);
+    //    printf(" \t roue menante Z = %d , D = %f, M = %f \n", arbre3.getMenante()->getZ(), 
+    //        arbre3.getMenante()->getD(), arbre3.getMenante()->getM());
+    //    printf(" \t roue menee Z = %d , D = %f, M = %f \n", arbre3.getMenee()->getZ(), 
+    //        arbre3.getMenee()->getD(), arbre3.getMenee()->getM());
+    //        arbre3 = *arbre1.getSuivant();
+    //} 
+>>>>>>> f4acd3734b157a1edce083659fa6e01e0f3feef0
 
     //transmission.ajoutArbre(&arbre1);
     //transmission.ajoutArbre(&arbre2);
 
-    printf("nb arbre %d\n ", transmission.getNbArbres());
+    //printf("nb arbre %d\n ", transmission.getNbArbres());
 
     print_trans(transmission);
 
