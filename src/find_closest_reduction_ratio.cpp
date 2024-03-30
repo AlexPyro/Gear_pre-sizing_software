@@ -20,13 +20,13 @@ double find_closest_reduction_ratio(double r, Arbre& arbre_menant, Arbre& arbre_
     modules_possibles.push_back(6);
     modules_possibles.push_back(8);
 
-    float M_menee, M_menante, erreur;
+    float M_menee, M_menante , erreur = 1;
     int Z_menee, Z_menante;
     double current_error;
 
-    for (int i = 0; i < modules_possibles.size() ; i++)
+    for (int i = 0; i < modules_possibles.size() - 1 ; i++)
     {
-        for (int j = 0; j < modules_possibles.size() ; j++)
+        for (int j = 0; j < modules_possibles.size() - 1; j++)
         {
             for (int k = 18 ; k < 150 ; k++)
             {

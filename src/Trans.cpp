@@ -4,7 +4,11 @@
 
 Trans::Trans()
 {
-    _arbres = nullptr;
+    //_arbres = nullptr;
+    _Nb = 0;
+    _sens = 0;
+    _Ne = 0;
+    _Ns = 0;
 }
 
 Trans::~Trans()
@@ -19,9 +23,9 @@ Trans::~Trans()
 
 }
 
-Arbre* Trans::getArbres()
+Arbre* Trans::getArbres(int n)
 {
-    return _arbres;
+    return listeArbre[n];
 }
    
 int Trans::getNbArbres()
@@ -30,49 +34,59 @@ int Trans::getNbArbres()
 }
     
 void Trans::ajoutArbre(Arbre* next)
-{   
-<<<<<<< HEAD
-    if (_Nb == 0)
+{ 
+   /*  std::cout << " in : Nb = " << _Nb;
+
+    Arbre* arbre__ = new Arbre(*next);
+
+    if (_Nb == 0) 
     {
-=======
-    Arbre* arbre__ = new Arbre;
-    *arbre__ = *next;
-    if (_Nb == 0){
->>>>>>> f4acd3734b157a1edce083659fa6e01e0f3feef0
-        _arbres = next;
-        _Nb++;
-    }
+        _arbres = arbre__; 
+        _sens = 1;
+    } 
 
     else
     {
         Arbre* p = _arbres;
-        Arbre* p_ = nullptr;
 
-        for (int i = 0; i < _Nb; i++)
-        {
-            p_ = p->getSuivant();
-            p = p_;
+        while (p->getSuivant() != nullptr) 
+        {   
+            std::cout << "1";
+            p = p->getSuivant();
         }
+        std::cout << "2";
+        p->setSuivant(arbre__); 
+        std::cout << "3";
+    } */
 
-<<<<<<< HEAD
-        p->setSuivant(next);
-        _Nb++;
-=======
-    p->setSuivant(arbre__);
-    _Nb++;
->>>>>>> f4acd3734b157a1edce083659fa6e01e0f3feef0
+    listeArbre.push_back(next);
+
+    if (_sens > 0)
+    {
+        _sens = -1;
     }
+
+    if (_sens < 0)
+    {
+        _sens = 1;
+    }
+
+    _Nb++;
 }
     
 void Trans::retraitArbre(int n)
 {
-    _Nb--;
+    /* _Nb--;
     Arbre* p = _arbres;
     Arbre* p_ = nullptr;
-    for (int i = 0; i < _Nb; i++){
+    for (int i = 0; i < _Nb; i++)
+    {
         p_ = p->getSuivant();
         p = p_;
     }
-    p->setSuivant(nullptr);
+    p->setSuivant(nullptr); */
+
+    listeArbre.pop_back();
+    _Nb--;
 
 }

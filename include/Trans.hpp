@@ -4,12 +4,12 @@ class Trans
 {
     private :
 
-    bool _sens;
+    int _sens;
     double _Ne;
     double _Ns;
     int _Nb; //nb arbre
-
-    Arbre* _arbres; 
+    //Arbre* _arbres; 
+    std::vector<Arbre*> listeArbre;
 
     protected :
 
@@ -18,7 +18,7 @@ class Trans
     Trans();
     ~Trans();
 
-    Arbre* getArbres();
+    Arbre* getArbres(int);
     int getNbArbres();
 
     void ajoutArbre(Arbre*);
