@@ -23,4 +23,5 @@ class Arbre{
     void setMenee(Roue*);
     Arbre* getSuivant();
     void setSuivant(Arbre*);
+    Arbre& operator=(const Arbre& autre);
 };

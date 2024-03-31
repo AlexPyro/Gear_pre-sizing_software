@@ -14,7 +14,10 @@ Arbre::Arbre(Roue* menee, Roue* menante, double N, int sens)
 }
 
 Arbre::Arbre()
-{
+{   
+    _suivant = nullptr;
+    _menee = nullptr;
+    _menante = nullptr;
     _N = 0;
     _sens = 1;
 }
@@ -40,10 +43,13 @@ int Arbre::getSens()
 
 void Arbre::setSens(int sens)
 {
-    if(sens){
+    if(sens)
+    {
         _sens = 1;
     }
-    else{
+
+    else
+    {
         _sens = 0;
     }
 }
@@ -67,15 +73,28 @@ Arbre* Arbre::getSuivant()
 
 void Arbre::setSuivant(Arbre* suivant)
 {
-    _suivant = new Arbre(*suivant);
+    _suivant = suivant;
 }
 
 void Arbre::setMenante(Roue* roue)
 {
-    _menante = new Roue(*roue);
+    _menante = roue;
 }
 
 void Arbre::setMenee(Roue* roue)
 {
-    _menante = new Roue(*roue);
+    _menee = roue;
 }
+
+Arbre& Arbre::operator=(const Arbre& autre) 
+{
+        if (this != &autre) { // Vérifier l'auto-affectation
+            // Effectuer une copie en profondeur des membres dynamiques
+            *_menante = *autre._menante;
+            *_menee = *autre._menee;
+            _N = autre._N;
+            _sens = autre._sens;
+            // Pas besoin de copier _suivant car il n'est pas dynamique
+        }
+        return *this;
+    }

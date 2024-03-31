@@ -3,54 +3,40 @@
 
 
 
-double find_closest_reduction_ratio(double r, Arbre& arbre_menant, Arbre& arbre_mene)
+double find_closest_reduction_ratio(double r, Arbre* arbre_menant, Arbre* arbre_mene)
 {
-    std::vector<float> modules_possibles;
-    modules_possibles.push_back(0.13);
-    modules_possibles.push_back(0.5);
-    modules_possibles.push_back(0.6);
-    modules_possibles.push_back(0.8);
-    modules_possibles.push_back(1.25);
-    modules_possibles.push_back(1.5);
-    modules_possibles.push_back(2);
-    modules_possibles.push_back(2.5);
-    modules_possibles.push_back(3);
-    modules_possibles.push_back(4);
-    modules_possibles.push_back(5);
-    modules_possibles.push_back(6);
-    modules_possibles.push_back(8);
+    std::vector<double> modules_possibles = {0.13, 0.5, 0.6, 0.8, 1.25, 1.5, 2, 2.5, 3, 4, 5, 6, 8};
 
-    float M_menee, M_menante , erreur = 1;
-    int Z_menee, Z_menante;
-    double current_error;
+    double best_error = 1000;
+    Roue* best_menee = nullptr;
+    Roue* best_menante = nullptr;
 
-    for (int i = 0; i < modules_possibles.size() - 1 ; i++)
+    for (int i = 0; i < modules_possibles.size(); i++) 
     {
-        for (int j = 0; j < modules_possibles.size() - 1; j++)
+        for (int j = 0; j < modules_possibles.size(); j++) 
         {
-            for (int k = 18 ; k < 150 ; k++)
+            for (int k = 18; k < 150; k++) 
             {
-                for (int l = 18; l < 150 ; l++)
-                {   
-                    current_error = abs(r - (k * modules_possibles[i])/(l * modules_possibles[j]));
+                for (int l = 18; l < 150; l++) 
+                {
+                    double ratio = k * modules_possibles[i] / (l * modules_possibles[j]);
+                    double error = r - ratio;
+                    
+                
 
-                    if (erreur > current_error)
-                    {
-                        erreur = current_error;
-                        M_menee = modules_possibles[i];
-                        M_menante =  modules_possibles[j];
-                        Z_menee = k;
-                        Z_menante = l;
+                    if ( error <= 0 && error > best_error || error >= 0 && error < best_error) 
+                    {   
+                        best_error = error;
+                        best_menee = new Roue(modules_possibles[i], k);
+                        best_menante = new Roue(modules_possibles[j], l);
                     }
-                } 
-            } 
-        }  
+                }
+            }
+        }
     }
 
-    Roue menante(M_menante, Z_menante), menee(M_menee, Z_menee);
-    
-    arbre_menant.setMenante(&menante);
-    arbre_mene.setMenee(&menee);
+    arbre_menant->setMenante(best_menante);
+    arbre_mene->setMenee(best_menee);
 
-    return (M_menee * Z_menee)/(M_menante * Z_menante);
+    return (best_menee->getD())/(best_menante->getD());
 }

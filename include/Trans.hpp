@@ -8,8 +8,8 @@ class Trans
     double _Ne;
     double _Ns;
     int _Nb; //nb arbre
-    //Arbre* _arbres; 
-    std::vector<Arbre*> listeArbre;
+    Arbre* _arbres; 
+    //std::vector<Arbre> listeArbre;
 
     protected :
 
@@ -18,7 +18,7 @@ class Trans
     Trans();
     ~Trans();
 
-    Arbre* getArbres(int);
+    Arbre* getArbres();
     int getNbArbres();
 
     void ajoutArbre(Arbre*);
